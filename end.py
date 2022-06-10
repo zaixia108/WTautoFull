@@ -26,7 +26,8 @@ def main_end():
         if flag_back is False:
             log('正在检测是否有其他要素')
             pic_list = {'pic/lingqu.png', 'pic/res01.png', 'pic/ok02.png', 'pic/okk.png',
-                        'pic/ok03.png', 'pic/rescom.png', 'pic/close.png', 'pic/x.png', 'pic/completeres.png','pic/buy.png','pic/checkin.png','pic/backtobase2.png','pic/lost.png'}
+                        'pic/ok03.png', 'pic/rescom.png', 'pic/close.png', 'pic/x.png', 'pic/tectree.png',
+                        'pic/completeres.png', 'pic/buy.png', 'pic/checkin.png', 'pic/backtobase2.png', 'pic/lost.png'}
             for pic in pic_list:
                 a = locate(pic, 0.8)
                 time.sleep(0.5)
@@ -57,10 +58,19 @@ def main_end():
                         log('完成研发')
                     elif pic == 'pic/buy.png':
                         notbuy = locate('pic/notbuy.png', 0.8)
+                        no = locate('pic/no.png', 0.8)
                         if notbuy is not None:
                             time.sleep(0.5)
                             click(notbuy)
                             log('pic/notbuy.png')
+                        elif no is not None:
+                            time.sleep(0.5)
+                            click(no)
+                            log('pic/no.png')
+                    elif pic == 'pic/tectree.png':
+                        p = (20, 60)
+                        click(p)
+                        log('关闭科技树')
                     elif pic == 'pic/checkin.png':
                         click(a)
                         log('签到')

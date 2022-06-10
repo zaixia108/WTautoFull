@@ -1,18 +1,20 @@
 import random
 import time
 from concurrent.futures import ThreadPoolExecutor
-import keyboard
+
 import pyautogui
-import key
 import win32gui
+
+import key
 from find import find, locate, find_lit_mat
 from presskey import hold, wtpress, key_down, key_up, press
 from utils import active, logger_log as log, click
+
 flag = False
 run_flag = False
 
 
-def run():#转向，定速
+def run():  # 转向，定速
     global flag
     global run_flag
     while True:
@@ -223,6 +225,17 @@ def back_to_base():#返回基地检测
         if backtobase1 is not None:
             pyautogui.moveTo(backtobase1)
             click(backtobase1)
+            time.sleep(6)
+            while True:
+                check_backtobase1 = locate('pic/backtobase1.png', 0.8)
+                time.sleep(0.5)
+                if check_backtobase1 is not None:
+                    click(check_backtobase1)
+                    log('返回基地失败，重新返回基地')
+                    continue
+                else:
+                    log('返回基地成功')
+                    break
             BB01 = '船舰摧毁，正在返回基地'
             flag = True
         elif backtobase2 is not None:

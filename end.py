@@ -1,8 +1,6 @@
 import time
 
-import key
 from find import locate, find_match, check
-from presskey import press
 from utils import active, logger_log as log, click
 
 

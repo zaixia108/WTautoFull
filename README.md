@@ -19,7 +19,7 @@
 如下图<br>
 ![Alt text](https://github.com/zaixia108/pic/blob/main/jiaocheng3.png)
 ![Alt text](https://github.com/zaixia108/pic/blob/main/jiaocheng4.png)
-![Alt text](https://github.com/zaixia108/pic/blob/main/jiaocheng5.png)
+![Alt text](https://github.com/zaixia108/pic/blob/main/jiaocheng5.png)<br>
 按要求注册完毕后点击充值，输入获得的激活码充值，然后重新启动软件，并登录<br>
 点击进入软件，进入下图界面，先点击启动版本，分为Gaijin版和Steam版<br>
 ![Alt text](https://github.com/zaixia108/pic/blob/main/jiaocheng6.png)<br>

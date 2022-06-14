@@ -33,8 +33,10 @@ def main_end():
                 time.sleep(0.5)
                 if a is not None:
                     if pic == 'pic/lingqu.png':
-                        click(a)
-                        log('开箱子')
+                        menu = locate('pic/lost.png', 0.8)
+                        if menu is not None:
+                            click(a)
+                            log('开箱子')
                     elif pic == 'pic/res01.png':
                         click(a)
                         log('分配研发')
@@ -72,13 +74,15 @@ def main_end():
                         click(p)
                         log('关闭科技树')
                     elif pic == 'pic/checkin.png':
-                        click(a)
-                        log('签到')
-                        time.sleep(8)
-                        lingquqiandao = locate('pic/close.png', 0.8)
-                        time.sleep(0.5)
-                        click(lingquqiandao)
-                        log('领取成功')
+                        menu = locate('pic/lost.png', 0.8)
+                        if menu is not None:
+                            click(a)
+                            log('签到')
+                            time.sleep(8)
+                            lingquqiandao = locate('pic/close.png', 0.8)
+                            time.sleep(0.5)
+                            click(lingquqiandao)
+                            log('领取成功')
                     elif pic == 'pic/backtobase2.png':
                         click(a)
                         log('返回基地')
